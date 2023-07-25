@@ -24,4 +24,4 @@ jobs:
         if: steps.mix-sobelow-cache.outputs.cache-hit != 'true'
         run: mix deps.get
       - name: Check Security
-        run: mix sobelow --config
+        run: mix sobelow --config --set-exit-status
